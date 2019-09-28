@@ -1,0 +1,30 @@
+{
+  "name": "json2xml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require babel-core/register ./tests",
+    "report": "nyc --reporter=html --reporter=text mocha --require babel-core/register ./tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "jsdom": "^15.1.1",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "nyc": {
+    "include": "src",
+    "exclude": "tests/**/*"
+  }
+}
